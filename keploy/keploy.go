@@ -21,8 +21,8 @@ import (
 
 	"github.com/creasty/defaults"
 	"github.com/go-playground/validator/v10"
-	"github.com/keploy/go-sdk/mock"
-	"github.com/keploy/go-sdk/pkg/keploy"
+	"github.com/chrisbowcutt/go-sdk/mock"
+	"github.com/chrisbowcutt/go-sdk/pkg/keploy"
 	proto "go.keploy.io/server/grpc/regression"
 	"go.keploy.io/server/pkg/models"
 	"go.uber.org/zap"

@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	internal "github.com/keploy/go-sdk/pkg/keploy"
+	internal "github.com/chrisbowcutt/go-sdk/pkg/keploy"
 )
 
 // Now returns an instance of time.Time. In record or off mode, the current time

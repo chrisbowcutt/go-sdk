@@ -11,9 +11,9 @@ import (
 
 	"github.com/araddon/dateparse"
 	"github.com/go-test/deep"
-	"github.com/keploy/go-sdk/keploy"
-	"github.com/keploy/go-sdk/mock"
-	internal "github.com/keploy/go-sdk/pkg/keploy"
+	"github.com/chrisbowcutt/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/mock"
+	internal "github.com/chrisbowcutt/go-sdk/pkg/keploy"
 	"go.keploy.io/server/pkg/models"
 	"go.uber.org/zap"
 )

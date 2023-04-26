@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 	"github.com/bnkamalesh/webgo/v6"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 )
 
 // WebgoMiddlewareV6 adds keploy instrumentation for WebGo V6 router.

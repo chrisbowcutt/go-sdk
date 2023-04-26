@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/keploy/go-sdk/pkg/keploy"
+	"github.com/chrisbowcutt/go-sdk/pkg/keploy"
 	proto "go.keploy.io/server/grpc/regression"
 	"go.keploy.io/server/pkg/models"
 

@@ -15,11 +15,11 @@ import (
 	"reflect"
 	"sync"
 
-	// "github.com/keploy/go-sdk/pkg"
-	internal "github.com/keploy/go-sdk/pkg/keploy"
+	// "github.com/chrisbowcutt/go-sdk/pkg"
+	internal "github.com/chrisbowcutt/go-sdk/pkg/keploy"
 
-	"github.com/keploy/go-sdk/keploy"
-	"github.com/keploy/go-sdk/mock"
+	"github.com/chrisbowcutt/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/mock"
 	proto "go.keploy.io/server/grpc/regression"
 	"go.keploy.io/server/pkg/models"
 	"go.uber.org/zap"

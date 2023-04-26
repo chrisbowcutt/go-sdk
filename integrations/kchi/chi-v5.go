@@ -3,7 +3,7 @@ package kchi
 import (
 	"context"
 	"github.com/go-chi/chi"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 	"net/http"
 )
 

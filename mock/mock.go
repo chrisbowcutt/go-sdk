@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/keploy/go-sdk/pkg/keploy"
+	"github.com/chrisbowcutt/go-sdk/pkg/keploy"
 	proto "go.keploy.io/server/grpc/regression"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"

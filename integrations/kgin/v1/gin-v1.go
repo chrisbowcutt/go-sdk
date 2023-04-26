@@ -12,8 +12,8 @@ import (
 	"sync"
 
 	"github.com/gin-gonic/gin"
-	"github.com/keploy/go-sdk/keploy"
-	internal "github.com/keploy/go-sdk/pkg/keploy"
+	"github.com/chrisbowcutt/go-sdk/keploy"
+	internal "github.com/chrisbowcutt/go-sdk/pkg/keploy"
 	"go.keploy.io/server/pkg/models"
 	"go.uber.org/zap"
 )

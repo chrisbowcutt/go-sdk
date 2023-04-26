@@ -1,6 +1,6 @@
 # Keploy Go-SDK
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/keploy/go-sdk#readme-contents)](https://pkg.go.dev/github.com/keploy/go-sdk#readme-contents)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/chrisbowcutt/go-sdk#readme-contents)](https://pkg.go.dev/github.com/chrisbowcutt/go-sdk#readme-contents)
 
 This is the client SDK for the [Keploy](https://github.com/keploy/keploy) testing platform. You can use this to generate realistic mock files or entire e2e tests for your applications. The **HTTP mocks/stubs and tests are the same format** are are inter-exchangeable.
 
@@ -17,7 +17,7 @@ This is the client SDK for the [Keploy](https://github.com/keploy/keploy) testin
 ## Installation
 
 ```bash
-go get -u github.com/keploy/go-sdk
+go get -u github.com/chrisbowcutt/go-sdk
 ```
 
 ## Usage
@@ -26,13 +26,13 @@ go get -u github.com/keploy/go-sdk
 
 These mocks/stubs are realistic and frees you up from writing them manually. Keploy creates `readable/editable` mocks/stubs yaml files which can be referenced in any of your unit-tests tests. An example is mentioned in [Mocking/Stubbing for unit tests](#mockingstubbing-for-unit-tests) section
 
-1. **Wrap your depedency**: To wrap your depdencies, you need to integrate them with the keploy supported wrappers as metioned below. If your dependency is not supported please open a [feature request.](https://github.com/keploy/go-sdk/issues/new?assignees=&labels=&template=feature_request.md&title=)
+1. **Wrap your depedency**: To wrap your depdencies, you need to integrate them with the keploy supported wrappers as metioned below. If your dependency is not supported please open a [feature request.](https://github.com/chrisbowcutt/go-sdk/issues/new?assignees=&labels=&template=feature_request.md&title=)
 2. **Record**: To record you can import the keploy mocking library and set the mode to record mode. This should generate a file containing the mocks/stubs.
 
 ```go
 import(
-    "github.com/keploy/go-sdk/keploy"
-    "github.com/keploy/go-sdk/mock"
+    "github.com/chrisbowcutt/go-sdk/keploy"
+    "github.com/chrisbowcutt/go-sdk/mock"
 )
 
 // Inside your unit test
@@ -65,7 +65,7 @@ These tests can be run alongside your manually written `go-tests`and adds covera
 2. **Intialize SDK**: You would need to initialize the keploy SDK
 
 ```go
-import"github.com/keploy/go-sdk/keploy"
+import"github.com/chrisbowcutt/go-sdk/keploy"
 
 k := keploy.New(keploy.Config{
      App: keploy.AppConfig{
@@ -131,8 +131,8 @@ r.Use(kchi.ChiMiddlewareV5(k))
 
 ```go
 import(
-  "github.com/keploy/go-sdk/integrations/kchi"
-	"github.com/keploy/go-sdk/keploy"
+  "github.com/chrisbowcutt/go-sdk/integrations/kchi"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 	"github.com/go-chi/chi"
 )
 
@@ -164,8 +164,8 @@ kgin.GinV1(k, r)
 
 ```go
 import(
-  "github.com/keploy/go-sdk/integrations/kgin/v1"
-	"github.com/keploy/go-sdk/keploy"
+  "github.com/chrisbowcutt/go-sdk/integrations/kgin/v1"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 )
 
 func main(){
@@ -196,8 +196,8 @@ e.Use(kecho.EchoMiddlewareV4(k))
 
 ```go
 import(
-  "github.com/keploy/go-sdk/integrations/kecho/v4"
-	"github.com/keploy/go-sdk/keploy"
+  "github.com/chrisbowcutt/go-sdk/integrations/kecho/v4"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 	"github.com/labstack/echo/v4"
 )
 
@@ -240,8 +240,8 @@ router.Start()
 
 ```go
 import(
-  "github.com/keploy/go-sdk/integrations/kwebgo/v4"
-	"github.com/keploy/go-sdk/keploy"
+  "github.com/chrisbowcutt/go-sdk/integrations/kwebgo/v4"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 	"github.com/bnkamalesh/webgo/v4"
 )
 
@@ -278,8 +278,8 @@ r.Use(kmux.MuxMiddleware(k))
 
 ```go
 import(
-  "github.com/keploy/go-sdk/integrations/kmux"
-	"github.com/keploy/go-sdk/keploy"
+  "github.com/chrisbowcutt/go-sdk/integrations/kmux"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 	"github.com/gorilla/mux"
   "net/http"
 )
@@ -313,8 +313,8 @@ mw := kfasthttp.FastHttpMiddleware(k)
 
 ```go
 import(
-	"github.com/keploy/go-sdk/integrations/kfasthttp"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/integrations/kfasthttp"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 	"github.com/valyala/fasthttp"
 )
 
@@ -353,8 +353,8 @@ handler := khttp.KMiddleware(handler, k)
 ```go
 import(
 
-	"github.com/keploy/go-sdk/integrations/khttp"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/integrations/khttp"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 )
 
 func main(){
@@ -386,8 +386,8 @@ func main(){
 
 ```go
 import(
-	"github.com/keploy/go-sdk/integrations/khttp"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/integrations/khttp"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 )
 	//This function is used to add middlewares in your configurable file
 	func setupMiddlewares(handler http.Handler) http.Handler {
@@ -415,8 +415,8 @@ Testcases can be generated for gRPC unary methods by just registering keploy's g
 import(
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-	"github.com/keploy/go-sdk/integrations/kgrpcserver"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/integrations/kgrpcserver"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 )
 
 func main() {
@@ -443,7 +443,7 @@ func main() {
 ### 1. MongoDB
 
 ```go
-import("github.com/keploy/go-sdk/integrations/kmongo")
+import("github.com/chrisbowcutt/go-sdk/integrations/kmongo")
 
 db  := client.Database("testDB")
 col := kmongo.NewCollection(db.Collection("Demo-Collection"))
@@ -466,7 +466,7 @@ Following operations are supported:<br>
 ### 2. DynamoDB
 
 ```go
-import("github.com/keploy/go-sdk/integrations/kddb")
+import("github.com/chrisbowcutt/go-sdk/integrations/kddb")
 
 client := kddb.NewDynamoDB(dynamodb.New(sess))
 ```
@@ -528,7 +528,7 @@ Here is an example for postgres driver and binary encoded outputs -
 
 ```go
     import (
-        "github.com/keploy/go-sdk/integrations/ksql/v1" // the outputs of sql queries are stored as binary encoded in exported yaml files
+        "github.com/chrisbowcutt/go-sdk/integrations/ksql/v1" // the outputs of sql queries are stored as binary encoded in exported yaml files
         "github.com/lib/pq"
     )
     func main(){
@@ -569,7 +569,7 @@ Example for gORM with GCP-Postgres driver:
 ```go
     import (
 		gcppostgres "github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/dialers/postgres"
-        "github.com/keploy/go-sdk/integrations/ksql/v1" // the outputs of sql queries are stored as binary encoded in exported yaml files
+        "github.com/chrisbowcutt/go-sdk/integrations/ksql/v1" // the outputs of sql queries are stored as binary encoded in exported yaml files
         "gorm.io/driver/postgres"
 	    "gorm.io/gorm"
     )
@@ -625,7 +625,7 @@ Here is an example of making elastic search client with keploy's http intercepto
 import (
 	"net/http"
 	"github.com/elastic/go-elasticsearch/v8"
-	"github.com/keploy/go-sdk/integrations/khttpclient"
+	"github.com/chrisbowcutt/go-sdk/integrations/khttpclient"
 )
 
 func ConnectWithElasticsearch(ctx context.Context) *elasticsearch.Client {
@@ -652,7 +652,7 @@ import(
 	"context"
 	"time"
 	"github.com/go-redis/redis/v8"
-	"github.com/keploy/go-sdk/integrations/kredis"
+	"github.com/chrisbowcutt/go-sdk/integrations/kredis"
 )
 
 type redisCache struct {
@@ -691,7 +691,7 @@ client := http.Client{
 #### Example
 
 ```go
-import("github.com/keploy/go-sdk/integrations/khttpclient")
+import("github.com/chrisbowcutt/go-sdk/integrations/khttpclient")
 
 func main(){
 	// initialize a gorilla mux
@@ -788,8 +788,8 @@ conn, err := grpc.Dial(address, grpc.WithInsecure(), kgrpc.WithClientUnaryInterc
 
 ```go
 import(
-	"github.com/keploy/go-sdk/integrations/kgrpc"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/integrations/kgrpc"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 )
 
 func main() {
@@ -828,12 +828,12 @@ import (
 	"github.com/labstack/echo/v4"
 
 	"github.com/benbjohnson/clock"
-	"github.com/keploy/go-sdk/integrations/kchi"
-	"github.com/keploy/go-sdk/integrations/kecho/v4"
-	"github.com/keploy/go-sdk/integrations/kgin/v1"
+	"github.com/chrisbowcutt/go-sdk/integrations/kchi"
+	"github.com/chrisbowcutt/go-sdk/integrations/kecho/v4"
+	"github.com/chrisbowcutt/go-sdk/integrations/kgin/v1"
 
-	"github.com/keploy/go-sdk/integrations/kjwtauth"
-	"github.com/keploy/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/integrations/kjwtauth"
+	"github.com/chrisbowcutt/go-sdk/keploy"
 )
 
 var (
@@ -949,9 +949,9 @@ import (
 	"bytes"; "context"; "io"; "net/http"; "testing"
 
 	"github.com/go-test/deep"
-	"github.com/keploy/go-sdk/integrations/khttpclient"
-	"github.com/keploy/go-sdk/keploy"
-	"github.com/keploy/go-sdk/mock"
+	"github.com/chrisbowcutt/go-sdk/integrations/khttpclient"
+	"github.com/chrisbowcutt/go-sdk/keploy"
+	"github.com/chrisbowcutt/go-sdk/mock"
 )
 
 func TestExample(t *testing.T) {

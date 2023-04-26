@@ -1,7 +1,7 @@
 package keploy
 
 import (
-	"github.com/keploy/go-sdk/pkg/keploy"
+	"github.com/chrisbowcutt/go-sdk/pkg/keploy"
 )
 
 const (
@@ -18,4 +18,4 @@ func GetMode() keploy.Mode {
 // SetTestMode sets the keploy SDK mode to MODE_TEST
 func SetTestMode() {
 	_ = keploy.SetMode(MODE_TEST)
-}
+} 

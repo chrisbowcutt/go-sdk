@@ -44,7 +44,7 @@ go version
 
 Follow the following instructions to start contributing - 
 
-1 . Fork [this](https://github.com/keploy/go-sdk.git)
+1 . Fork [this](https://github.com/chrisbowcutt/go-sdk.git)
 
 2 . Clone the copy of your forked project
 
@@ -60,7 +60,7 @@ cd go-sdk
 4 . Add a remote reference (upstream) to the original repository.
 
 ```
-git remote add upstream https://github.com/keploy/go-sdk.git
+git remote add upstream https://github.com/chrisbowcutt/go-sdk.git
 ```
 
 5 . Always take a pull from the upstream repository to your master branch to keep it updated with the main project.
@@ -84,7 +84,7 @@ git checkout -b <your-branch-name>
 8 . Install the dependencies by running the following command
 
 ```
-go get -u github.com/keploy/go-sdk
+go get -u github.com/chrisbowcutt/go-sdk
 ```
 
 9 . Make the desired changes

@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/keploy/go-sdk/keploy"
-	internal "github.com/keploy/go-sdk/pkg/keploy"
+	"github.com/chrisbowcutt/go-sdk/keploy"
+	internal "github.com/chrisbowcutt/go-sdk/pkg/keploy"
 
 	"github.com/valyala/fasthttp"
 	"github.com/valyala/fasthttp/fasthttpadaptor"

@@ -1,8 +1,9 @@
-module github.com/keploy/go-sdk
+module github.com/chrisbowcutt/go-sdk
 
 go 1.16
 
 //replace go.keploy.io/server => ../keploy
+
 
 require (
 	github.com/aws/aws-sdk-go v1.42.23
@@ -31,6 +32,7 @@ require (
 require (
 	github.com/creasty/defaults v1.6.0
 	github.com/fullstorydev/grpcurl v1.8.7
+	github.com/chrisbowcutt/go-sdk v0.8.6
 	go.keploy.io/server v0.8.6
 	google.golang.org/protobuf v1.28.1
 )
