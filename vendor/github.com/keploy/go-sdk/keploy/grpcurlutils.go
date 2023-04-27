@@ -2,8 +2,6 @@ package keploy
 
 import (
 	"context"
-	"github.com/chrisbowcutt/go-sdk/utils"
-
 	"io"
 	"os"
 	"strconv"
@@ -23,7 +21,6 @@ import (
 const noVersion = "dev build <no version set>"
 
 var ver = noVersion
-
 
 type multiString []string
 
@@ -158,10 +155,7 @@ func GrpCurl(grpcReq string, id string, port string, method string) error {
 		IncludeTextSeparator:  includeSeparators,
 		AllowUnknownFields:    allowUnknownFields,
 	}
-
-
-	_, formatter, err := grpcurl.RequestParserAndFormatter(grpcurl.Format(format), descSource, in, options)
-	rf := utils.NewCustomJsonRequestParser(in)
+	rf, formatter, err := grpcurl.RequestParserAndFormatter(grpcurl.Format(format), descSource, in, options)
 	if err != nil {
 		return err
 	}
@@ -173,7 +167,6 @@ func GrpCurl(grpcReq string, id string, port string, method string) error {
 	}
 
 	ch := NewCustomHandler(h)
-
 	err = grpcurl.InvokeRPC(ctx, descSource, cc, symbol, addlHeaders, ch, rf.Next)
 	if err != nil {
 		if errStatus, ok := status.FromError(err); ok && formatError {
